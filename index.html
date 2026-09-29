@@ -11,89 +11,83 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="template-notice"><span>PLACEHOLDER PREVIEW</span> All profile and research details are sample fields.</div>
   <header class="site-header">
     <div class="header-inner">
-      <a class="wordmark" href="#about" aria-label="Your Name, introduction"><span class="wordmark-icon" aria-hidden="true">YN</span> Your Name</a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu <span aria-hidden="true">+</span></button>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-        <a href="#about" aria-current="location">About</a>
+        <a href="#about" aria-current="location">Home</a>
         <a href="#research">Research</a>
+        <a href="#news">News</a>
         <a href="#publications">Publications</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-cv" href="cv.html">CV template</a>
       </nav>
     </div>
   </header>
 
   <main id="main" class="page-shell">
-    <aside class="profile" aria-label="Profile overview">
-      <!-- Replace this block with a photo only when you are ready to share one. -->
-      <div class="portrait-placeholder"><span class="portrait-initials" aria-hidden="true">YN</span><span>Photo placeholder</span></div>
-      <p class="eyebrow">Academic portfolio</p>
-      <p class="profile-name">Your Name</p>
-      <p class="profile-role">[Degree or current position]<br>[Department]<br>[Institution]</p>
-      <div class="profile-rule"></div>
-      <p class="small-label">Research focus</p>
-      <ul class="focus-list"><li>[Research area one]</li><li>[Research area two]</li><li>[Research area three]</li></ul>
-      <a class="button button-dark" href="cv.html">View CV template</a>
-      <p class="profile-note">Names, affiliations, dates, and links are intentionally left as placeholders.</p>
-    </aside>
-
-    <div class="main-column">
-      <section id="about" class="intro section-anchor" aria-labelledby="intro-title">
-        <p class="eyebrow">Introduction</p>
-        <h1 id="intro-title">Your Name<span class="title-period">.</span></h1>
-        <p class="intro-subtitle">[Your research field]<br><span>[Your current affiliation]</span></p>
-        <p class="intro-copy">[Introduce your academic background and the questions you want to investigate. Describe your research interests, relevant experience, and the direction you hope to pursue in a PhD.]</p>
-        <div class="intro-actions"><a class="text-link" href="#research">Explore research</a><a class="text-link" href="#contact">Contact details</a></div>
-        <div class="interest-strip"><span class="small-label">Areas of interest</span><div class="tags"><span>[Topic one]</span><span>[Topic two]</span><span>[Topic three]</span></div></div>
-      </section>
-
-      <section id="research" class="content-section section-anchor" aria-labelledby="research-title">
-        <div class="section-heading"><span class="section-number" aria-hidden="true">01</span><h2 id="research-title">Research & projects</h2></div>
-        <p class="section-intro">[Summarize the central questions that connect your work.]</p>
-        <article class="project-card">
-          <div class="project-meta"><span class="small-label">[Research project]</span><span>[Year – Year]</span></div>
-          <h3>[Project title one]</h3>
-          <p>[State the research question, your approach, and why the problem matters.]</p>
-          <div class="tags"><span>[Method or tool]</span><span>[Research topic]</span></div>
-          <details><summary>Project details</summary><div class="details-content"><p><strong>Your contribution</strong><br>[Explain your specific role, methods, and responsibilities.]</p><p><strong>Outcome</strong><br>[Add a verified finding, artifact, or result. Include a project or code link when available.]</p></div></details>
-        </article>
-        <article class="project-card">
-          <div class="project-meta"><span class="small-label">[Research project]</span><span>[Year – Year]</span></div>
-          <h3>[Project title two]</h3>
-          <p>[Describe another research experience or a substantial academic project.]</p>
-          <div class="tags"><span>[Method or tool]</span><span>[Research topic]</span></div>
-          <details><summary>Project details</summary><div class="details-content"><p><strong>Your contribution</strong><br>[Describe the work you carried out and the skills you developed.]</p><p><strong>Outcome</strong><br>[Add the result or current status, supported by evidence when possible.]</p></div></details>
-        </article>
-      </section>
-
-      <section id="publications" class="content-section section-anchor" aria-labelledby="publications-title">
-        <div class="section-heading"><span class="section-number" aria-hidden="true">02</span><h2 id="publications-title">Publications</h2></div>
-        <p class="section-intro">[Add papers, preprints, or presentations here. Remove this section if it does not apply.]</p>
-        <article class="publication"><span class="publication-year">[Year]</span><div><h3>[Publication or preprint title]</h3><p>[Author list, with your name emphasized]</p><p class="publication-venue">[Venue · Publication status]</p><span class="pending-link">Paper / DOI link placeholder</span></div></article>
-        <article class="publication"><span class="publication-year">[Year]</span><div><h3>[Presentation or poster title]</h3><p>[Author list]</p><p class="publication-venue">[Conference or event · Presentation type]</p><span class="pending-link">Poster / slides link placeholder</span></div></article>
-      </section>
-
-      <section id="education" class="content-section section-anchor" aria-labelledby="education-title">
-        <div class="section-heading"><span class="section-number" aria-hidden="true">03</span><h2 id="education-title">Education & experience</h2></div>
-        <div class="timeline">
-          <article class="timeline-item"><p class="timeline-date">[Year – Year]</p><div><h3>[Degree and field of study]</h3><p class="timeline-place">[University or institution]</p><p>[Relevant coursework, thesis topic, or academic distinction.]</p></div></article>
-          <article class="timeline-item"><p class="timeline-date">[Year – Year]</p><div><h3>[Research or teaching role]</h3><p class="timeline-place">[Laboratory, department, or institution]</p><p>[Describe your responsibilities and relevant contributions.]</p></div></article>
+    <section id="about" class="profile section-anchor" aria-labelledby="intro-title">
+      <div class="profile-media">
+        <!-- Replace with your photo when ready; retain the portrait-placeholder class. -->
+        <div class="portrait-placeholder"><span class="portrait-initials" aria-hidden="true">YN</span><span>Photo placeholder</span></div>
+        <div id="contact" class="profile-contact">
+          <ul class="profile-links" aria-label="Profile links">
+            <li><a href="cv.html">CV</a></li>
+            <li><span class="pending-link">[Scholar]</span></li>
+            <li><span class="pending-link">[GitHub]</span></li>
+          </ul>
+          <p>Email: [name] [at] [institution.edu]</p>
         </div>
-        <div class="supporting-grid"><div><h3 class="small-label">Methods & skills</h3><p>[Research methods]<br>[Programming languages or tools]<br>[Experimental or analytical skills]</p></div><div><h3 class="small-label">Awards & service</h3><p>[Award or scholarship · Year]<br>[Academic service or mentoring]<br>[Relevant professional activity]</p></div></div>
-      </section>
+      </div>
+      <div class="profile-bio">
+        <h1 id="intro-title">Your Name</h1>
+        <!-- Sample prose: replace every bracketed field with verified information. -->
+        <p>I am a [position] at [Institution], working with [advisor or collaborator] in [research field]. Previously, I received my [degree] in [field] from [University], where I worked with [advisor] in [laboratory].</p>
+        <p>Outside of research, I enjoy [interest one] and [interest two].</p>
+      </div>
+    </section>
 
-      <section id="contact" class="contact-section section-anchor" aria-labelledby="contact-title">
-        <p class="eyebrow">Get in touch</p><h2 id="contact-title">Contact</h2>
-        <p>[Add a brief note about the research conversations or opportunities you welcome.]</p>
-        <dl class="contact-list"><div><dt>Email</dt><dd>[Your academic email]</dd></div><div><dt>Academic profile</dt><dd>[Google Scholar / ORCID link]</dd></div><div><dt>Code & projects</dt><dd>[Your code profile link]</dd></div></dl>
-        <p class="contact-note">Contact links will be available once you add your details.</p>
-      </section>
-      <footer class="site-footer"><span>Your Name · Academic portfolio</span><a href="#about">Back to top</a></footer>
-    </div>
+    <section id="research" class="content-section section-anchor" aria-labelledby="research-title">
+      <h2 id="research-title">Research</h2>
+      <p>My research focuses on <strong>[research area]</strong>. I study [central question], combining [approach one] and [approach two] to develop [research goal]. My interests include:</p>
+      <ul class="compact-list">
+        <li><strong>[Research direction one]</strong> for [application];</li>
+        <li><strong>[Research direction two]</strong>.</li>
+      </ul>
+    </section>
+
+    <section id="news" class="content-section section-anchor" aria-labelledby="news-title">
+      <h2 id="news-title">News</h2>
+      <!-- Newest first. Remove unused sample entries. -->
+      <ul class="news-list">
+        <li><span class="entry-date">[Month Year]</span> [Research milestone or award.]</li>
+        <li><span class="entry-date">[Month Year]</span> [Talk or conference presentation.]</li>
+        <li><span class="entry-date">[Month Year]</span> [Paper or project announcement.]</li>
+      </ul>
+      <details class="older-news"><summary>Earlier news</summary><ul class="news-list">
+        <li><span class="entry-date">[Month Year]</span> [Earlier research update.]</li>
+        <li><span class="entry-date">[Month Year]</span> [Earlier academic update.]</li>
+      </ul></details>
+    </section>
+
+    <section id="publications" class="content-section section-anchor" aria-labelledby="publications-title">
+      <h2 id="publications-title">Publications <span class="heading-note">(* equal contribution)</span></h2>
+      <!-- Duplicate this row for additional papers; replace fields with verified details. -->
+      <article class="publication">
+        <div class="publication-image image-placeholder">Research figure</div>
+        <div>
+          <h3>[Paper title: method, problem, and application]</h3>
+          <p class="authors"><strong>Your Name</strong>*, [Second Author]*, [Third Author]</p>
+          <p><span class="publication-venue">[Conference · Year]</span> / <span class="pending-link">[Project website]</span></p>
+        </div>
+      </article>
+    </section>
+
+    <section id="software" class="content-section" aria-labelledby="software-title">
+      <h2 id="software-title">Software</h2>
+      <p>I contribute to [research group or open-source community], including:</p>
+      <ul class="compact-list"><li><strong>[Tool name]</strong>: A toolkit for [research task].</li><li><strong>[Framework name]</strong>: A collection of [methods or environments].</li></ul>
+    </section>
+
+    <footer class="site-footer"><span>Placeholder template · All bracketed details are sample fields.</span><a href="#about">Back to top</a></footer>
   </main>
 </body>
 </html>

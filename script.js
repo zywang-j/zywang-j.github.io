@@ -1,4 +1,4 @@
-// Navigation is progressively enhanced; the content works without JavaScript.
+// Navigation is progressively enhanced; content and disclosures work without JavaScript.
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('.site-nav');
 
@@ -17,7 +17,16 @@ if (menuButton && nav) {
     menuButton.querySelector('span').textContent = open ? '−' : '+';
   });
   nav.addEventListener('click', event => {
-    if (event.target.closest('a')) closeMenu();
+    const link = event.target.closest('a');
+    if (!link) return;
+    closeMenu();
+    updateCurrentLink(link.hash);
+    // Keep keyboard focus on visible content after the mobile menu closes.
+    const section = document.getElementById(link.hash.slice(1));
+    if (section) {
+      section.setAttribute('tabindex', '-1');
+      section.focus({ preventScroll: true });
+    }
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
@@ -26,17 +35,14 @@ if (menuButton && nav) {
     }
   });
 
-  const sectionLinks = [...nav.querySelectorAll('a[href^="#"]')];
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-      const active = entries.filter(entry => entry.isIntersecting)
-        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-      if (!active) return;
-      sectionLinks.forEach(link => {
-        if (link.hash === `#${active.target.id}`) link.setAttribute('aria-current', 'location');
-        else link.removeAttribute('aria-current');
-      });
-    }, { rootMargin: '-15% 0px -55% 0px', threshold: 0 });
-    document.querySelectorAll('.section-anchor').forEach(section => observer.observe(section));
-  }
+  // Several sections fit in one viewport. Track the selected anchor so a
+  // bottom-clamped scroll does not highlight a different section.
+  const updateCurrentLink = (hash = window.location.hash || '#about') => {
+    nav.querySelectorAll('a[href^="#"]').forEach(link => {
+      if (link.hash === hash) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  };
+  window.addEventListener('hashchange', () => updateCurrentLink());
+  updateCurrentLink();
 }
