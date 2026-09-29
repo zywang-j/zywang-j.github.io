@@ -70,7 +70,6 @@ summary::marker { font-size: 10px; }
 .authors { color: var(--muted); }
 .authors strong { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .publication-venue { color: var(--accent); }
-.subheading { margin-top: 8px; }
 .site-footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--line); padding: 14px 0 20px; color: var(--muted); font-size: 11px; }
 
 @media (max-width: 760px) {
